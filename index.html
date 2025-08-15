@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monitoring Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- SheetJS (XLSX) voor client-side Excel parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">📊 Dashboard</div>
+      <div class="section">
+        <div class="section-title">Data upload</div>
+        <label class="filelabel">Nulmeting (xlsx/csv)
+          <input type="file" id="fileBase" accept=".xlsx,.csv" />
+        </label>
+        <label class="filelabel">Actueel (xlsx/csv)
+          <input type="file" id="fileCur" accept=".xlsx,.csv" />
+        </label>
+        <div class="help">
+          Peildatum niet in bestand? Stel handmatig in:
+        </div>
+        <div class="row">
+          <input type="date" id="dateBase" />
+          <input type="date" id="dateCur" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="menu">
+          <button class="menu-item active" data-page="dashboard">Dashboard</button>
+          <button class="menu-item" data-page="klantenkaart">Klantenkaart</button>
+          <button class="menu-item" data-page="vergelijker">Vergelijker</button>
+          <button class="menu-item" data-page="advanced">Advanced</button>
+        </div>
+      </div>
+      <div class="section small">
+        <div class="muted">© Dashboard CO</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <div class="h-left">
+          <h1 id="pageTitle">Dashboard</h1>
+          <div class="now" id="now"></div>
+        </div>
+        <div class="h-right">
+          <div class="kpi">
+            <div class="kpi-label">Peildatum nulmeting</div>
+            <div class="pill" id="pillBase">Onbekend</div>
+            <div class="muted" id="nameBase">—</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Peildatum actueel</div>
+            <div class="pill" id="pillCur">Onbekend</div>
+            <div class="muted" id="nameCur">—</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Status</div>
+            <div class="pill" id="pillStatus">Upload links de bestanden</div>
+          </div>
+        </div>
+      </header>
+
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
