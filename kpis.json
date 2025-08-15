@@ -1,0 +1,43 @@
+[
+  {
+    "key": "clubs_total",
+    "label": "Aantal clubs",
+    "type": "count_rows"
+  },
+  {
+    "key": "members_total",
+    "label": "Totaal leden",
+    "type": "sum",
+    "column": "members_count"
+  },
+  {
+    "key": "members_avg",
+    "label": "Gem. leden per club",
+    "type": "mean",
+    "column": "members_count"
+  },
+  {
+    "key": "volunteers_total",
+    "label": "Totaal vrijwilligers",
+    "type": "sum",
+    "column": "volunteers_count"
+  },
+  {
+    "key": "volunteers_avg",
+    "label": "Gem. vrijwilligers per club",
+    "type": "mean",
+    "column": "volunteers_count"
+  },
+  {
+    "key": "canteen_pct",
+    "label": "% met kantine",
+    "type": "pct_true",
+    "column": "has_canteen"
+  },
+  {
+    "key": "net_new_clubs",
+    "label": "Nieuwe clubs t.o.v. nulmeting",
+    "type": "count_new_names",
+    "baseline_required": true
+  }
+]

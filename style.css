@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
+
+:root {
+  --brand-dark: #212945;
+  --brand-accent: #52E8E8;
+}
+
+html, body, [class*="css"]  {
+  font-family: 'Archivo', sans-serif !important;
+}
+
+section[data-testid="stSidebar"] {
+  background-color: var(--brand-dark) !important;
+}
+
+section[data-testid="stSidebar"] * {
+  color: #fff !important;
+}
+
+div[data-testid="stMetricValue"] {
+  font-weight: 700;
+}
+
+.small-muted {
+  opacity: .75;
+  font-size: 0.85rem;
+}
+
+.kpi-badge {
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: rgba(82,232,232,0.15);
+  border: 1px solid rgba(82,232,232,0.35);
+  margin: 2px 6px 2px 0;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  background: #fff;
+}
+
+.spacer { height: 6px; }
